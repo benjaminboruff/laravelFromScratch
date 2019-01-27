@@ -14,7 +14,9 @@ services:
     volumes:
       - .:/code
       - lvf_scratch_data:/var/lib/postgresql/data
-    command: php artisan serve
+    command: >
+      bash -c "cd myfirstsite
+      && php artisan serve --host=0.0.0.0 --port=8000"
 
   postgres:
     image: postgres:11
