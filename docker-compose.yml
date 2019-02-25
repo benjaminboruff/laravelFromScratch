@@ -23,6 +23,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: lvf_scratch_db
+    ports:
+      - 5432:5432
     volumes:
       - lvf_scratch_data:/var/lib/postgresql/data
 
